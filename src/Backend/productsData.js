@@ -59,3 +59,9 @@ const productsData = [
 export const getProductsData = () => {
     return productsData;
   };
+
+//   fetch product ID from arroy of objects
+
+export const getProductById = (id) => {
+    return productsData.find((product) => product.id === id);
+  }
