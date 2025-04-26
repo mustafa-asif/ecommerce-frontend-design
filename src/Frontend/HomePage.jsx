@@ -1,5 +1,8 @@
 import React,{useState,useEffect} from 'react'
 import { getProductsData } from '../Backend/productsData';
+import Timer from '../components/Timer';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const HomePage = () => {
 const[products,setProducts] = useState([]);
@@ -19,23 +22,43 @@ useEffect(()=>{
 
 
   return (
-    <section>
-     
-      <main className="products-list">
-        {products.map((product) => (
-          <div key={product.id} className="product-card">
-            <div>
-              <img src={product.img} alt={product.name} />
-            </div>
-          <div>
-            <h2>{product.name}</h2>
-            <p> {product.discount}</p>
-          </div>
-          </div>
-        ))}
-      </main>
+  <>
+  <Header />
+    <section className="p-4">
+    <main className="grid grid-cols-1 md:grid-cols-6 gap-4 border-y-2 border-gray-200 items-center">
       
-    </section>
+      {/* Timer Section */}
+      <nav className="   ">
+        <Timer />
+      </nav>
+  
+      {/* Products Section */}
+      {products.map((product) => (
+        <div key={product.id} className="bg-white p-4 rounded shadow flex flex-col items-center justify-center text-center">
+          
+          {/* Product Image */}
+          <div className="w-full h-24 flex items-center justify-center mb-2">
+            <img src={product.img} alt={product.name} className="object-contain h-full" />
+          </div>
+  
+          {/* Product Name */}
+          <h2 className="text-sm font-medium mb-2">{product.name}</h2>
+  
+          {/* Discount Button */}
+          <button className="bg-red-100 text-red-600 text-xs px-3 py-1 rounded-full hover:bg-red-600 hover:text-white transition">
+            {product.discount}
+          </button>
+  
+        </div>
+      ))}
+  
+    </main>
+  </section>
+  <Footer />
+  
+  
+  
+</>
   )
 }
 
