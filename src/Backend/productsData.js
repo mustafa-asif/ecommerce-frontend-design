@@ -60,6 +60,12 @@ export const getProductsData = () => {
     return productsData;
   };
 
+//   fetch product ID from arroy of objects
+
+export const getProductById = (id) => {
+    return productsData.find((product) => product.id === id);
+  }
+
 
 // get producu Id to deisplay the description on but page before get into cart
 export const getProductID= (productID)=>{

@@ -3,14 +3,22 @@ import { getProductsData } from '../Backend/productsData';
 import Timer from '../components/Timer';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { getProductById } from '../Backend/productsData';
 
 const HomePage = () => {
 const[products,setProducts] = useState([]);
 
+//fetch data from productsData.js file and set the data to products state
+
+
+
 const getProductData=()=>{
   const data=getProductsData();
   setProducts(data);
-  console.log(data);
+  // const productId=data[1].id;
+  // const product=getProductById(productId);
+  // console.log(product);
+  // console.log(data);
 }
 
 useEffect(()=>{
@@ -34,7 +42,10 @@ useEffect(()=>{
   
       {/* Products Section */}
       {products.map((product) => (
-        <div key={product.id} className="bg-white p-4 rounded shadow flex flex-col items-center justify-center text-center">
+        <div  onClick={()=>{
+          const productId=getProductById(product.id);
+          console.log(productId);
+        }} key={product.id} className="bg-white p-4 rounded shadow flex flex-col items-center justify-center text-center">
           
           {/* Product Image */}
           <div className="w-full h-24 flex items-center justify-center mb-2">
