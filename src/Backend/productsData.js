@@ -67,8 +67,3 @@ export const getProductById = (id) => {
   }
 
 
-// get producu Id to deisplay the description on but page before get into cart
-export const getProductID= (productID)=>{
-  let matchingID= productsData.find((product) => product.id === productID);
-  return matchingID;
-}
