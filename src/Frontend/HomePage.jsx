@@ -3,6 +3,7 @@ import { getProductsData } from '../Backend/productsData';
 import Timer from '../components/Timer';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Trending from '../components/Trending';
 import { getProductById } from '../Backend/productsData';
 
 const HomePage = () => {
@@ -32,6 +33,7 @@ useEffect(()=>{
   return (
   <>
   <Header />
+  <Trending />
     <section className="p-4">
     <main className="grid grid-cols-1 md:grid-cols-6 gap-4 border-y-2 border-gray-200 items-center">
       
