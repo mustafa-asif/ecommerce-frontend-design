@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import Interior from '../InteriorComponents/Interior';
+import RecommendedData from '../Recommended/RecommendedData';
 import { getProductsData } from '../Backend/productsData';
 import Timer from '../components/Timer';
 import Header from '../components/Header';
@@ -14,20 +15,15 @@ const[products,setProducts] = useState([]);
 
 //fetch data from productsData.js file and set the data to products state
 
-
-
 const getProductData=()=>{
   const data=getProductsData();
   setProducts(data);
-  // const productId=data[1].id;
-  // const product=getProductById(productId);
-  // console.log(product);
-  // console.log(data);
+  
 }
 
 useEffect(()=>{
   getProductData();
-  // console.log(products)
+  
 },[])
 
 
@@ -72,6 +68,9 @@ useEffect(()=>{
   </section>
   <section>
     <Interior />
+  </section>
+  <section className='p-4'>
+    <RecommendedData />
   </section>
   <section>
     <ExtraServices/>
