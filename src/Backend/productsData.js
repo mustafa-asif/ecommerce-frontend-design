@@ -15,6 +15,9 @@ import juicer from '../assets/Images/interior/juicer.jpg';
 import vaas from '../assets/Images/interior/vaas.jpg';
 import blenders from '../assets/Images/interior/blenders.jpg';
 import homeAppliances from '../assets/Images/interior/homeAppliances.jpg';
+import bluePhone from '../assets/Images/tech/bluePhone.jpg';
+import redPhone from '../assets/Images/tech/redPhone.jpg';
+import kettle from '../assets/Images/tech/kettle.jpg';
 
 
 
@@ -62,19 +65,6 @@ const productsData = [
   },
 ];
 
-
-  //export the array of object to use in other files from function
-export const getProductsData = () => {
-    return productsData;
-  };
-
-//   fetch product ID from arroy of objects
-
-export const getProductById = (id) => {
-    return productsData.find((product) => product.id === id);
-  }
-
-
 const interiorProducts=[
   {
     id: 1,
@@ -92,7 +82,7 @@ const interiorProducts=[
   },
   {
     id: 3,
-    name:"Kitchen Dishes",
+    name:" Dishes",
     price: "USD 19",
     img:kitchenDishes,
    
@@ -127,12 +117,82 @@ const interiorProducts=[
   },
   {
     id: 8,
-    name:"Home Appliances",
+    name:" Appliances",
     price: "USD 19",
     img:homeAppliances,
    
-  }
+  },
+  {
+    id: 9,
+    name:" Watches",
+    price: "USD 19",
+    img:watchImg,
+    
+  },
+  {
+    id: 10,
+    name:"Laptops",
+    price: "USD 19",
+    img:laptopImg,
+   
+  },
+  {
+    id: 11,
+    name:"GoPro ",
+    price: "USD 19",
+    img:camera,
+    
+  },
+  {
+    id: 12,
+    name:"HeadPhones",
+    price: "USD 19",
+    img:headPhoneImg,
+   
+  },
+  {
+    id: 13,
+    name:"Canon ",
+    price: "USD 19",
+    img:blackPhoneImg,
+  
+  },
+  {
+    id: 14,
+    name:" Phone",
+    price: "USD 19",
+    img:bluePhone,
+   
+  },
+  {
+    id: 15,
+    name:"Kettle",
+    price: "USD 19",
+    img:kettle,
+   
+  },
+  {
+    id: 16,
+    name:" Phone",
+    price: "USD 19",
+    img:redPhone,
+   
+  },
+  
 ]
+
+  //export the array of object to use in other files from function
+export const getProductsData = () => {
+    return productsData;
+  };
+
+//   fetch product ID from arroy of objects
+
+export const getProductById = (id) => {
+    return productsData.find((product) => product.id === id);
+  }
+
+
 
 export const getInteriorProducts = () => {
   return interiorProducts;
