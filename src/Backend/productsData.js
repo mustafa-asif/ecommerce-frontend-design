@@ -7,6 +7,14 @@ import laptopImg from '../assets/Images/tech/laptop.jpg';
 // import kettleImg from '../assets/Images/tech/kettle.jpg';
 import headPhoneImg from '../assets/Images/tech/headphones.jpg';
 // import headPhoneWhiteImg from '../assets/Images/tech/headPhoneWhite.jpg'
+import softChairs from '../assets/Images/interior/softChairs.jpg';
+import lamp from '../assets/Images/interior/lamp.jpg';
+import kitchenDishes from '../assets/Images/interior/kitchenDishes.jpg';
+import mudBowl from '../assets/Images/interior/mudBowl.jpg';
+import juicer from '../assets/Images/interior/juicer.jpg';
+import vaas from '../assets/Images/interior/vaas.jpg';
+import blenders from '../assets/Images/interior/blenders.jpg';
+import homeAppliances from '../assets/Images/interior/homeAppliances.jpg';
 
 
 
@@ -65,5 +73,72 @@ export const getProductsData = () => {
 export const getProductById = (id) => {
     return productsData.find((product) => product.id === id);
   }
+
+
+const interiorProducts=[
+  {
+    id: 1,
+    name:"Soft Chairs",
+    price: "USD 19",
+    img:softChairs,
+    
+  },
+  {
+    id: 2,
+    name:"Lamp",
+    price: "USD 19",
+    img:lamp,
+   
+  },
+  {
+    id: 3,
+    name:"Kitchen Dishes",
+    price: "USD 19",
+    img:kitchenDishes,
+   
+  },
+  {
+    id: 4,
+    name:"Bowl",
+    price: "USD 19",
+    img:mudBowl,
+   
+  },
+  {
+    id: 5,
+    name:"Juicer",
+    price: "USD 19",
+    img:juicer,
+   
+  },
+  {
+    id: 6,
+    name:"Vaas",
+    price: "USD 19",
+    img:vaas,
+   
+  },
+  {
+    id: 7,
+    name:"Blenders",
+    price: "USD 19",
+    img:blenders,
+   
+  },
+  {
+    id: 8,
+    name:"Home Appliances",
+    price: "USD 19",
+    img:homeAppliances,
+   
+  }
+]
+
+export const getInteriorProducts = () => {
+  return interiorProducts;
+};
+export const getInteriorProductById = (id) => {
+  return interiorProducts.find((product) => product.id === id);
+}
 
 
