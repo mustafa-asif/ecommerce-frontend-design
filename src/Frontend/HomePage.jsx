@@ -3,6 +3,7 @@ import Interior from '../InteriorComponents/Interior';
 import { getProductsData } from '../Backend/productsData';
 import Timer from '../components/Timer';
 import Header from '../components/Header';
+import ExtraServices from '../components/ExtraServices';
 import Footer from '../components/Footer';
 import Trending from '../components/Trending';
 import Newsletter from '../components/Newsletter';
@@ -71,6 +72,9 @@ useEffect(()=>{
   </section>
   <section>
     <Interior />
+  </section>
+  <section>
+    <ExtraServices/>
   </section>
   <Newsletter />
   <Footer />
