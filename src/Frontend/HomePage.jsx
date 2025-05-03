@@ -4,6 +4,7 @@ import Timer from '../components/Timer';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Trending from '../components/Trending';
+import Newsletter from '../components/Newsletter';
 import { getProductById } from '../Backend/productsData';
 
 const HomePage = () => {
@@ -67,6 +68,7 @@ useEffect(()=>{
   
     </main>
   </section>
+  <Newsletter />
   <Footer />
   
   
