@@ -7,6 +7,17 @@ import laptopImg from '../assets/Images/tech/laptop.jpg';
 // import kettleImg from '../assets/Images/tech/kettle.jpg';
 import headPhoneImg from '../assets/Images/tech/headphones.jpg';
 // import headPhoneWhiteImg from '../assets/Images/tech/headPhoneWhite.jpg'
+import softChairs from '../assets/Images/interior/softChairs.jpg';
+import lamp from '../assets/Images/interior/lamp.jpg';
+import kitchenDishes from '../assets/Images/interior/kitchenDishes.jpg';
+import mudBowl from '../assets/Images/interior/mudBowl.jpg';
+import juicer from '../assets/Images/interior/juicer.jpg';
+import vaas from '../assets/Images/interior/vaas.jpg';
+import blenders from '../assets/Images/interior/blenders.jpg';
+import homeAppliances from '../assets/Images/interior/homeAppliances.jpg';
+import bluePhone from '../assets/Images/tech/bluePhone.jpg';
+import redPhone from '../assets/Images/tech/redPhone.jpg';
+import kettle from '../assets/Images/tech/kettle.jpg';
 
 
 
@@ -54,6 +65,121 @@ const productsData = [
   },
 ];
 
+const interiorProducts=[
+  {
+    id: 1,
+    name:"Soft Chairs",
+    price: "USD 19",
+    img:softChairs,
+    
+  },
+  {
+    id: 2,
+    name:"Lamp",
+    price: "USD 19",
+    img:lamp,
+   
+  },
+  {
+    id: 3,
+    name:" Dishes",
+    price: "USD 19",
+    img:kitchenDishes,
+   
+  },
+  {
+    id: 4,
+    name:"Bowl",
+    price: "USD 19",
+    img:mudBowl,
+   
+  },
+  {
+    id: 5,
+    name:"Juicer",
+    price: "USD 19",
+    img:juicer,
+   
+  },
+  {
+    id: 6,
+    name:"Vaas",
+    price: "USD 19",
+    img:vaas,
+   
+  },
+  {
+    id: 7,
+    name:"Blenders",
+    price: "USD 19",
+    img:blenders,
+   
+  },
+  {
+    id: 8,
+    name:" Appliances",
+    price: "USD 19",
+    img:homeAppliances,
+   
+  },
+  {
+    id: 9,
+    name:" Watches",
+    price: "USD 19",
+    img:watchImg,
+    
+  },
+  {
+    id: 10,
+    name:"Laptops",
+    price: "USD 19",
+    img:laptopImg,
+   
+  },
+  {
+    id: 11,
+    name:"GoPro ",
+    price: "USD 19",
+    img:camera,
+    
+  },
+  {
+    id: 12,
+    name:"HeadPhones",
+    price: "USD 19",
+    img:headPhoneImg,
+   
+  },
+  {
+    id: 13,
+    name:"Canon ",
+    price: "USD 19",
+    img:blackPhoneImg,
+  
+  },
+  {
+    id: 14,
+    name:" Phone",
+    price: "USD 19",
+    img:bluePhone,
+   
+  },
+  {
+    id: 15,
+    name:"Kettle",
+    price: "USD 19",
+    img:kettle,
+   
+  },
+  {
+    id: 16,
+    name:" Phone",
+    price: "USD 19",
+    img:redPhone,
+   
+  },
+  
+]
 
   //export the array of object to use in other files from function
 export const getProductsData = () => {
@@ -65,5 +191,14 @@ export const getProductsData = () => {
 export const getProductById = (id) => {
     return productsData.find((product) => product.id === id);
   }
+
+
+
+export const getInteriorProducts = () => {
+  return interiorProducts;
+};
+export const getInteriorProductById = (id) => {
+  return interiorProducts.find((product) => product.id === id);
+}
 
 

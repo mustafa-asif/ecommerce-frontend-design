@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react'
+import Interior from '../InteriorComponents/Interior';
 import { getProductsData } from '../Backend/productsData';
 import Timer from '../components/Timer';
 import Header from '../components/Header';
@@ -67,6 +68,9 @@ useEffect(()=>{
       ))}
   
     </main>
+  </section>
+  <section>
+    <Interior />
   </section>
   <Newsletter />
   <Footer />
