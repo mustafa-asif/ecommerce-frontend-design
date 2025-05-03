@@ -4,36 +4,36 @@ import { FaSearch, FaBoxOpen, FaPlane, FaShieldAlt } from 'react-icons/fa';
 const services = [
   {
     title: 'Source from Industry Hubs',
-    image: '/images/industry-hubs.jpg',
-    icon: <FaSearch className="w-5 h-5 text-blue-500" />,
+    image: '/images/image1.jpg',
+    icon: <FaSearch className="w-5 h-5 text-gray-500" />,
   },
   {
     title: 'Customize Your Products',
-    image: '/images/customize-products.jpg',
-    icon: <FaBoxOpen className="w-5 h-5 text-blue-500" />,
+    image: '/images/image2.jpg',
+    icon: <FaBoxOpen className="w-5 h-5 text-gray-500" />,
   },
   {
     title: 'Fast, reliable shipping by ocean or air',
-    image: '/images/shipping.jpg',
-    icon: <FaPlane className="w-5 h-5 text-blue-500" />,
+    image: '/images/image3.jpg',
+    icon: <FaPlane className="w-5 h-5 text-gray-500" />,
   },
   {
     title: 'Product monitoring and inspection',
-    image: '/images/product-monitoring.jpg',
-    icon: <FaShieldAlt className="w-5 h-5 text-blue-500" />,
+    image: '/images/image4.jpg',
+    icon: <FaShieldAlt className="w-5 h-5 text-gray-500" />,
   },
 ];
 
 const regions = [
-  { name: 'Arabic Emirates', domain: 'shopname.ae', flag: '/flags/uae.png' },
-  { name: 'Australia', domain: 'shopname.au', flag: '/flags/australia.png' },
-  { name: 'United States', domain: 'shopname.us', flag: '/flags/usa.png' },
-  { name: 'Russia', domain: 'shopname.ru', flag: '/flags/russia.png' },
-  { name: 'Italy', domain: 'shopname.it', flag: '/flags/italy.png' },
-  { name: 'Denmark', domain: 'denmark.com.dk', flag: '/flags/denmark.png' },
-  { name: 'France', domain: 'shopname.com.fr', flag: '/flags/france.png' },
-  { name: 'China', domain: 'shopname.ae', flag: '/flags/china.png' },
-  { name: 'Great Britain', domain: 'shopname.co.uk', flag: '/flags/uk.png' },
+  { name: 'Arabic Emirates', domain: 'shopname.ae', flag: '/flags/uae.svg' },
+  { name: 'Australia', domain: 'shopname.au', flag: '/flags/australia.svg' },
+  { name: 'United States', domain: 'shopname.us', flag: '/flags/usa.svg' },
+  { name: 'Russia', domain: 'shopname.ru', flag: '/flags/russia.svg' },
+  { name: 'Italy', domain: 'shopname.it', flag: '/flags/italy.svg' },
+  { name: 'Denmark', domain: 'denmark.com.dk', flag: '/flags/denmark.svg' },
+  { name: 'France', domain: 'shopname.com.fr', flag: '/flags/france.svg' },
+  { name: 'China', domain: 'shopname.ae', flag: '/flags/china.svg' },
+  
 ];
 
 const ExtraServices = () => {
@@ -57,7 +57,7 @@ const ExtraServices = () => {
             <div className="p-4">
               <h3 className="text-sm font-medium text-gray-700">{service.title}</h3>
             </div>
-            <div className="absolute top-2 right-2 bg-white p-1 rounded-full shadow">
+            <div className="absolute p-4 bg-blue-100  bottom-9 right-2 rounded-full shadow">
               {service.icon}
             </div>
           </article>
@@ -70,11 +70,11 @@ const ExtraServices = () => {
           {regions.map((region, idx) => (
             <li key={idx}>
               <span className="inline-flex items-center gap-1">
-                <img src={region.flag} alt="" className="w-5 h-3" />
+                <img src={region.flag} alt="" className="w-5 h-3 text-gray-400" />
                 {region.name}
               </span>
               <br />
-              <a href="#" className="text-blue-600">{region.domain}</a>
+              <a href="#" className="text-gray-600">{region.domain}</a>
             </li>
           ))}
         </ul>

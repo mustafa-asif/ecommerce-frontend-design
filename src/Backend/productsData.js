@@ -18,6 +18,13 @@ import homeAppliances from '../assets/Images/interior/homeAppliances.jpg';
 import bluePhone from '../assets/Images/tech/bluePhone.jpg';
 import redPhone from '../assets/Images/tech/redPhone.jpg';
 import kettle from '../assets/Images/tech/kettle.jpg';
+import bag from '../assets/Images/cloth/bag.jpg';
+import blazer from '../assets/Images/cloth/blazer.jpg';
+import shorts from '../assets/Images/cloth/shorts.jpg';
+import wallet from '../assets/Images/cloth/wallet.jpg';
+import skyBlueShirt from '../assets/Images/cloth/skyBlueShirt.jpg';
+import jeansJacket from '../assets/Images/cloth/jeansJacket.jpg';
+import blueShirt from '../assets/Images/cloth/blueShirt.jpg';
 
 
 
@@ -64,7 +71,7 @@ const productsData = [
     rating: 4.5
   },
 ];
-
+// interior products data
 const interiorProducts=[
   {
     id: 1,
@@ -180,6 +187,89 @@ const interiorProducts=[
   },
   
 ]
+// cloth products data
+const clothProducts=[
+  {
+    id: 1,
+    name:"Bag",
+    price: 12.99,
+    img:bag,
+    des:"Bag for travel"
+    
+  },
+  {
+    id: 2,
+    name:"Blazer",
+    price: 10.30,
+    img:blazer,
+    des:"Blazer for Men"
+   
+  },
+  {
+    id: 3,
+    name:" Shorts",
+    price:  10.30,
+    img:shorts,
+    des:"beach shorts"
+   
+  },
+  {
+    id: 4,
+    name:"Wallet",
+    price:  12.30,
+    img:wallet,
+    des:"Wallet"
+   
+  },
+  {
+    id: 5,
+    name:"Sky Blue",
+    price: 34.00,
+    img:skyBlueShirt,
+    des:"Sky Blue Shirt"
+   
+  },
+  {
+    id: 6,
+    name:"Jeans Jacket",
+    price: 99.00,
+    img:jeansJacket,
+    des:"Jeans Jacket"
+   
+  },
+  {
+    id: 7,
+    name:"Blue Shirt",
+    price: 8.99,
+    img:blueShirt,
+    des:"Blue Shirt"
+   
+  },
+  {
+    id: 8,
+    name:"Kettle",
+    price: 8.99,
+    img:kettle,
+    des:"Kettle for tea"
+   
+  },
+  {
+    id: 9,
+    name:"Headphones",
+    price: 8.99,
+    img:headPhoneImg,
+    des:"White Headphones"
+   
+  },
+  {
+    id: 10,
+    name:" POT",
+    price: 8.99,
+    img:mudBowl,
+    des:"POT"
+   
+  }
+]
 
   //export the array of object to use in other files from function
 export const getProductsData = () => {
@@ -193,12 +283,22 @@ export const getProductById = (id) => {
   }
 
 
-
+// export interior products data
 export const getInteriorProducts = () => {
   return interiorProducts;
 };
+// export cloth products data ID
 export const getInteriorProductById = (id) => {
   return interiorProducts.find((product) => product.id === id);
+}
+
+// export cloth products data
+export const getClothProducts = () => {
+  return clothProducts;
+};
+// export cloth products data ID
+export const getClothProductById = (id) => {
+  return clothProducts.find((product) => product.id === id);
 }
 
 
