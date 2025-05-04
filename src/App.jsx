@@ -1,7 +1,8 @@
 
 import './App.css'
 
-import HomePage from './Frontend/HomePage'
+// import HomePage from './Frontend/HomePage'
+import AppRouter from './Routes/AppRouter'
 
 function App() {
   
@@ -9,7 +10,7 @@ function App() {
   return (
     <>
 
-    <HomePage/>
+    <AppRouter/>
     
       
     </>
