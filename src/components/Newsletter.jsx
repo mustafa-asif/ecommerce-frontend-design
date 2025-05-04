@@ -4,8 +4,8 @@ import { EnvelopeIcon } from '@heroicons/react/24/solid'
 const Newsletter = () => {
   return (
     <main>
-      <section className='p-4 text-center border-t-2 border-gray-200'>
-        <div className="bg-white p-4 rounded-lg shadow-md">
+      <section className='p-4 text-center border-t-2 bg-gray-200 border-gray-200'>
+        <div className=" p-4   bg-gray-200 ">
           <h2 className="text-xl font-semibold mb-4">Subscribe to our Newsletter</h2>
           <p className="text-gray-600 mb-4">Get daily news on upcoming offers from many suppliers all over the world</p>
           <form className="  flex flex-row gap-2 justify-center">

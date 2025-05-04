@@ -9,9 +9,16 @@ import Footer from '../components/Footer';
 import Trending from '../components/Trending';
 import Newsletter from '../components/Newsletter';
 import { getProductById } from '../Backend/productsData';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
 const[products,setProducts] = useState([]);
+
+const navigate=useNavigate();
+const cartHandler=()=>{
+  navigate("/Cart")
+}
+
 
 //fetch data from productsData.js file and set the data to products state
 
@@ -46,6 +53,7 @@ useEffect(()=>{
         <div  onClick={()=>{
           const productId=getProductById(product.id);
           console.log(productId);
+          cartHandler();
         }} key={product.id} className="bg-white p-4 rounded shadow flex flex-col items-center justify-center text-center">
           
           {/* Product Image */}
