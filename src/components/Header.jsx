@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../assets/Images/logo/logo.svg';
+import { useNavigate } from 'react-router-dom';
 import {
   UserIcon,
   ChatBubbleLeftRightIcon,
@@ -17,6 +18,10 @@ const icons = [
 ];
 
 const Header = () => {
+  const navigate = useNavigate();
+  const DescriptionHandler=() => {
+    navigate('/Description');
+  }
   return (
     <header className="shadow ">
       {/* === TOP NAV === */}
@@ -66,7 +71,9 @@ const Header = () => {
         <div className="flex items-center space-x-6">
           <button className="flex items-center space-x-1 hover:text-blue-600 transition">
             <Bars3Icon className="w-5 h-5" />
-            <span>All category</span>
+            <span onClick={()=>{
+              DescriptionHandler()
+            }}>All category</span>
           </button>
           <a href="#" className="hover:text-blue-600 transition">
             Hot offers
